@@ -86,21 +86,6 @@ public class MiniMap : MonoBehaviour {
         }
     }
 
-    //helper function for DrawRoute
-    public bool DoesConnectToRouteNode(Node adjNode)
-    {
-        bool doesConnect = true;
-
-        foreach(Node node in route)
-        {
-            if(adjNode.id == node.id)
-            {
-                doesConnect = true;
-            }
-        }
-        return doesConnect;
-    }
-
     //helper function for DrawNodeMap to avoid redrawing same edges
     public bool EdgeHasBeenDrawn(List<Tuple<int, int>> drawnIDPairs, int curID, int adjID)
     {
